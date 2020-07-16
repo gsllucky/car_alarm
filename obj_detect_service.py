@@ -32,7 +32,7 @@ class ObjDetectInfer():
 
 app = FastAPI()
 
-with open('config.yaml', encoding='utf-8') as f:
+with open('config.yaml', 'r' ,encoding='utf-8') as f:
     cfg = yaml.load(f, Loader=yaml.FullLoader)
 
 obj_detect_infer = ObjDetectInfer(cfg)
